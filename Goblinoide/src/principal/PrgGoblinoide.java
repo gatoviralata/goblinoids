@@ -1,3 +1,33 @@
+import javax.swing.SwingUtilities;
+
+
+public class PrgGoblinoide {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SwingUtilities.invokeLater(new Runnable(){
+			public void run(){
+				TelaMenu newmenu = new TelaMenu();
+				newmenu.setVisible(true);
+				
+			}
+		});
+	}
+
+}
+
+
+
+
+
+
+
+
+
+/*
 package principal;
 
 import javax.swing.JOptionPane;
@@ -17,9 +47,7 @@ public class PrgGoblinoide {
 		return jogo;
 	}
 	
-	/**
-	 * @param args
-	 */
+
 	public static void main(String[] argv) {
 	
 	dialogo = "Pe�as dispon�veis: ";
@@ -27,7 +55,7 @@ public class PrgGoblinoide {
 	jogador2 = (JOptionPane.showInputDialog("Insira o nome do Jogador 2: "));
 	jogo = new Jogo(new Jogador(jogador1), new Jogador(jogador2));
 	
-	/* Turno */
+
 	do {
 		for(byte i = 0; i < 16; i++) {
 			if (jogo.getCaixa().getGoblinoide(i) != null) {
@@ -64,7 +92,6 @@ public class PrgGoblinoide {
 		imprimeJogo();
 	} while (!(jogo.getCaixa().estaVazia()));
 }
-	/* Fim do Turno */
 
 static void imprimeJogo() {
 	String interfaceJogo = "Tabuleiro:\n";
@@ -86,3 +113,4 @@ static void imprimeJogo() {
 	JOptionPane.showMessageDialog(null, interfaceJogo);
 }
 }
+*/
