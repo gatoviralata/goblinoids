@@ -22,7 +22,7 @@ public class PrgGoblinoide {
 	 */
 	public static void main(String[] argv) {
 	
-	dialogo = "Peças disponíveis: ";
+	dialogo = "Peï¿½as disponï¿½veis: ";
 	jogador1 = (JOptionPane.showInputDialog("Insira o nome do Jogador 1: "));
 	jogador2 = (JOptionPane.showInputDialog("Insira o nome do Jogador 2: "));
 	jogo = new Jogo(new Jogador(jogador1), new Jogador(jogador2));
@@ -35,7 +35,7 @@ public class PrgGoblinoide {
 			}
 		}
 		dialogo += "\n ";
-		dialogo += jogo.getJogadorDaVez().getNome() + ", retire uma peça para seu adversário jogar.";
+		dialogo += jogo.getJogadorDaVez().getNome() + ", retire uma peï¿½a para seu adversï¿½rio jogar.";
 		idGoblTemporario = Byte.parseByte(JOptionPane.showInputDialog(dialogo));
 		if(idGoblTemporario < 0 || idGoblTemporario > 15) {
 			if (jogo.getTabuleiro().verificaQuarto() > 0)
@@ -50,12 +50,12 @@ public class PrgGoblinoide {
 		}
 		jogo.getCaixa().removeGoblinoide(idGoblTemporario);
 		jogo.getJogadorDaVez().setGoblSelecionado(new Goblinoide(idGoblTemporario));
-		// aqui o programa dá uma "pausa" para ter certeza que o jogador escolheu
-		// o goblinóide certo, como se perguntasse "você tem certeza que deseja escolher este?"
+		// aqui o programa dï¿½ uma "pausa" para ter certeza que o jogador escolheu
+		// o goblinï¿½ide certo, como se perguntasse "vocï¿½ tem certeza que deseja escolher este?"
 		jogo.getTabuleiro().setGoblSugerido(jogo.getJogadorDaVez().getGoblSelecionado());
 		dialogo = "";
 		jogo.mudaTurno();
-		dialogo += jogo.getJogadorDaVez().getNome() + ", escolha onde o goblinóide ";
+		dialogo += jogo.getJogadorDaVez().getNome() + ", escolha onde o goblinï¿½ide ";
 		dialogo += jogo.getTabuleiro().getGoblSugerido().getNome() + " vai ficar. Coordenada ";
 		x = Byte.parseByte(JOptionPane.showInputDialog(dialogo + " X:"));
 		y = Byte.parseByte(JOptionPane.showInputDialog(dialogo + " Y:"));
