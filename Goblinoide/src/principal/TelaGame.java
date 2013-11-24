@@ -234,19 +234,7 @@ public class TelaGame extends JFrame {
 					
 					buttonTabuleiro[idt].setIcon(new ImageIcon(PrgGoblinoide.class.getResource(pathImg)));
 					
-					
-					if ((idt>0 && idt<4) || (idt>4 && idt<8) || (idt>8 && idt<12)||(idt>12)) {
-						xMatriz = 0;
-						
-					}
-					else if(idt==4||idt==8||idt==12){
-						xMatriz = 0;
-						yMatriz =+ 1;
-						xt = 10;
-						yt= yt + 123;
-					
-					}
-
+		
 					/// ver como mandar uma variavel para dentro de listener
 					System.out.println("posição X="+TelaGame.this.xMatriz);
 					System.out.println("posição y="+TelaGame.this.yMatriz);
